@@ -10,7 +10,7 @@ import SwiftUI;
 // ContentView - main
 
 struct ContentView: View {
-    var Emotes = ["🚗","🚕","🏎","🚓","🚡","✈️"];
+    var Emotes = ["🚗","🚕","🏎","🚓","🚡","✈️","🛫","🛬","🛩","🚉","🚅","🚣‍♀️","🎬","🏌️‍♀️","🏊‍♀️","🥇"];
     @State var EmoteCount = 4
     let columns = [GridItem(),GridItem(),GridItem()]
     var body: some View {
