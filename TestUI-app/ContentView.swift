@@ -14,10 +14,13 @@ struct ContentView: View {
     @State var EmoteCount = 4
     let columns = [GridItem(),GridItem(),GridItem()]
     var body: some View {
+        
         VStack {
-            LazyVGrid(columns: columns) {
-                ForEach(Emotes[0..<EmoteCount],id: \.self) { emoji in
-                    CardView(content: emoji).aspectRatio(2/3, contentMode: .fit);
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    ForEach(Emotes[0..<EmoteCount],id: \.self) { emoji in
+                        CardView(content: emoji).aspectRatio(2/3, contentMode: .fit);
+                    }
                 }
             }
             .padding(.horizontal);
