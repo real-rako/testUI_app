@@ -17,7 +17,7 @@ import SwiftUI;
 struct ContentView: View {
     var Emotes = ["🚗","🚕","🏎","🚓","🚡","✈️","🛫","🛬","🛩","🚉","🚅","🚣‍♀️","🎬","🏌️‍♀️","🏊‍♀️","🥇"];
     @State var EmoteCount = 4
-    let columns = [GridItem(),GridItem(),GridItem()]
+    let columns = [GridItem(.adaptive(minimum: 75))]
     var body: some View {
         
         VStack {
