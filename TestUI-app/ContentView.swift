@@ -45,6 +45,8 @@ struct ContentView: View {
             if SelectedEmote != 1 {
                 SelectedEmote = 1
                 Emotes = ["🚗","🚕","🏎","🚓","✈️","🛫","🛬","🛩"].shuffled()
+                EmoteCount = Int.random(in: 4...8)
+
             }
         }, label: {
             Image(systemName: "car").font(.largeTitle)
@@ -58,6 +60,8 @@ struct ContentView: View {
             if SelectedEmote != 2 {
                 SelectedEmote = 2
                 Emotes = ["🚣‍♀️","🎬","🏌️‍♀️","🏊‍♀️","🥇","🎥","📱","🖥"].shuffled()
+                EmoteCount = Int.random(in: 4...8)
+                
 
             }
         }, label: {
