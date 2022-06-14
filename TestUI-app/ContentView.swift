@@ -6,7 +6,7 @@
 //
 /*
  TODO
-    - Better landscape mode view
+    - 
     - 
  */
 
@@ -19,52 +19,19 @@ struct ContentView: View {
     @State var EmoteCount = 4
     let columns = [GridItem(.adaptive(minimum: 75))]
     var body: some View {
-        
-        VStack {
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(Emotes[0..<EmoteCount],id: \.self) { emoji in
-                        CardView(content: emoji).aspectRatio(2/3, contentMode: .fit);
+        NavigationView {
+            VStack {
+                ScrollView {
+                    LazyVGrid(columns: columns) {
+                        ForEach(Emotes[0..<EmoteCount],id: \.self) { emoji in
+                            CardView(content: emoji).aspectRatio(2/3, contentMode: .fit);
+                        }
                     }
                 }
-            }
-            .padding(.horizontal);
-            Spacer()
-            HStack {
-                MinButton
-                Spacer()
-                PlusButton
+                .padding(.horizontal).navigationTitle("Memrize")
             }
         }
-        
     }
-    var MinButton: some View {
-        Button(action: {
-            if EmoteCount > 1 {
-                EmoteCount -= 1
-            }
-            else {
-                // give error to user
-            }
-        }, label: {
-            Image(systemName: "minus.circle")
-        }).padding(.horizontal).font(.largeTitle)
-
-    }
-    var PlusButton: some View {
-        Button(action: {
-            if EmoteCount < Emotes.count {
-                EmoteCount += 1
-            }
-            else {
-                // give error to user
-            }
-        }, label: {
-            Image(systemName: "plus.circle")
-        }).padding(.horizontal).font(.largeTitle)
-        
-    }
-
 
 }
 
