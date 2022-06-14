@@ -4,6 +4,11 @@
 //
 //  Created by David Meester on 10/06/2022.
 //
+/*
+ TODO
+    - Better landscape mode view
+    - 
+ */
 
 import SwiftUI;
 
@@ -73,14 +78,13 @@ struct CardView: View {
             let figure  = RoundedRectangle(cornerRadius: 25)
 
             if IsUp {
-                figure.stroke(lineWidth: 4)
                 figure.fill(.white)
-            
+                figure.strokeBorder(lineWidth: 4)
                 Text(content).font(.largeTitle)}
             else {
                 figure.fill(.red)
             }
-        }.foregroundColor(.blue)
+        }.foregroundColor(.red)
             .onTapGesture {
                 IsUp = !IsUp
             }
