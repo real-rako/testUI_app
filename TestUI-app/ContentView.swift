@@ -44,7 +44,7 @@ struct ContentView: View {
         Button(action: {
             if SelectedEmote != 1 {
                 SelectedEmote = 1
-                Emotes = ["🚗","🚕","🏎","🚓","✈️","🛫","🛬","🛩"];
+                Emotes = ["🚗","🚕","🏎","🚓","✈️","🛫","🛬","🛩"].shuffled()
             }
         }, label: {
             Image(systemName: "car").font(.largeTitle)
@@ -57,7 +57,7 @@ struct ContentView: View {
         Button(action: {
             if SelectedEmote != 2 {
                 SelectedEmote = 2
-                Emotes = ["🚣‍♀️","🎬","🏌️‍♀️","🏊‍♀️","🥇","🎥","📱","🖥"];
+                Emotes = ["🚣‍♀️","🎬","🏌️‍♀️","🏊‍♀️","🥇","🎥","📱","🖥"].shuffled()
 
             }
         }, label: {
